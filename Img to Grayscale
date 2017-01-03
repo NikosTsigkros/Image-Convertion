@@ -1,4 +1,10 @@
 <html>
+<head>
+
+
+<h1>Filters</h1> </head>
+
+<!-- here starts the body!!! ---------------------------------- -->
 <body>
 <h1> Upload an Image and convert it in Grayscale!</h1>
 
