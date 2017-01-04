@@ -1,8 +1,29 @@
 <html>
 <head>
 
+<script> var image;
+var grayImage; 
 
-<h1>GrayScale</h1> 
+function upload() {
+  var imgcanvas1 = document.getElementById ("can1");
+  var fileinput = document.getElementById ("finput");
+  image = new SimpleImage (fileinput);
+  grayImage = image;
+  image.drawTo (imgcanvas1);
+}
+
+function makeGray() {
+   for (var pixel of grayImage.values()) {
+        var avg = (pixel.getRed() + pixel.getGreen() + pixel.getBlue())/3;
+        pixel.setRed(avg);
+        pixel.setGreen(avg);
+        pixel.setBlue(avg);
+   }
+  var imgcanvas2 = document.getElementById ("can2")
+  grayImage.drawTo (imgcanvas2);
+} </script>
+
+
 
   <style>
     body {
@@ -21,7 +42,7 @@
    </style>
 
 
-
+<h1>GrayScale</h1> 
 </head>
 
 <!-- here starts the body!!! ---------------------------------- -->
