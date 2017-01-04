@@ -2,7 +2,27 @@
 <head>
 
 
-<h1>Filters</h1> </head>
+<h1>GrayScale</h1> 
+
+  <style>
+    body {
+      background-color : white ;
+    }
+
+    .can {
+      height: 400px;
+      border : 1px solid #c3c3c3;
+    }
+
+    .div1 {
+      margin : 20pt;
+      
+    }
+   </style>
+
+
+
+</head>
 
 <!-- here starts the body!!! ---------------------------------- -->
 <body>
