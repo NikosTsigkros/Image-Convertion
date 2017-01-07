@@ -7,6 +7,42 @@
 
 <body>
 
+  
+<script src = "http://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+
+
+<div class = "div1">
+  <h1>Upload an image and use the filters below!</h1>
+</div>
+
+</br>
+</br>
+
+<div class = "divCanvas">
+  <canvas id="can1"></canvas>
+</div>
+
+<div class = "div2">
+  Upload a file:
+  <input type = "file" accept = "image/*" multiple = "false" id = "inputFile" onchange = "upload()">
+  <input type = "button" value = "Clear" id = "clearImg" onclick = "clearImg()">
+</div>
+
+<div class = "div3">
+  <u>Filters:</u>
+  <input class = "but1" type = "button" value = "Greyscale" id = "greyId" onclick = "doGrey()">
+  <input class = "but1" type = "button" value = "Invert" id = "invertId" onclick = "doInvert()">
+  <input class = "but1" type = "button" value = "Red" id = "redId" onclick = "doRed()">
+  <input class = "but1" type = "button" value = "Green" id = "greenId" onclick = "doGreen()">
+  <input class = "but1" type = "button" value = "Blue" id = "blueId" onclick = "doBlue()">
+  <input class = "but1" type = "button" value = "3 Stripes" id = "threeStripesId" onclick = "doThreeStripes()">
+  <input class = "but1" type = "button" value = "Rainbow" id = "rainbowId" onclick = "doRainbow()">
+  <input class = "but1" type = "button" value = "back to Original" id = "originalId" onclick = "doOriginal()">
+  </br>
+  Add frame
+<input type = "range" min = "10" max = "100" value = "10" id = "borderId" oninput = "doBorder()">
+</div>
+  
 </body>
 
 </html>
