@@ -1,71 +1,71 @@
 <html>
+
 <head>
+  <!-- test -->
+  <!-- SCRIPT STARTS -->
+  <script> var image;
+    var grayImage;
 
-<!-- SCRIPT STARTS -->  
-<script> var image;
-  var grayImage; 
-
-  function upload() {
-    var imgcanvas1 = document.getElementById ("can1");
-    var fileinput = document.getElementById ("finput");
-    image = new SimpleImage (fileinput);
-   grayImage = image;
-    image.drawTo (imgcanvas1);
-  }
-
-  function makeGray() {
-     for (var pixel of grayImage.values()) {
-          var avg = (pixel.getRed() + pixel.getGreen() + pixel.getBlue())/3;
-          pixel.setRed(avg);
-          pixel.setGreen(avg);
-          pixel.setBlue(avg);
+    function upload() {
+      var imgcanvas1 = document.getElementById("can1");
+      var fileinput = document.getElementById("finput");
+      image = new SimpleImage(fileinput);
+      grayImage = image;
+      image.drawTo(imgcanvas1);
     }
-    var imgcanvas2 = document.getElementById ("can2")
-    grayImage.drawTo (imgcanvas2);
-  } 
+
+    function makeGray() {
+      for (var pixel of grayImage.values()) {
+        var avg = (pixel.getRed() + pixel.getGreen() + pixel.getBlue()) / 3;
+        pixel.setRed(avg);
+        pixel.setGreen(avg);
+        pixel.setBlue(avg);
+      }
+      var imgcanvas2 = document.getElementById("can2")
+      grayImage.drawTo(imgcanvas2);
+    } 
   </script>
-<!-- SCRIPT ENDS -->
+  <!-- SCRIPT ENDS -->
 
 
   <style>
     body {
-      background-color : white ;
+      background-color: white;
     }
 
     .can {
       height: 400px;
-      border : 1px solid #c3c3c3;
+      border: 1px solid #c3c3c3;
     }
 
     .div1 {
-      margin : 20pt;
-      
+      margin: 20pt;
+
     }
-   </style>
+  </style>
 
 
-<h1>GrayScale</h1> 
+  <h1>GrayScale</h1>
 </head>
 
 <!-- here starts the BODY!!!  -->
-<body>
-<h1> Upload an Image and convert it in Grayscale!</h1>
 
-<div class = "div1">
-  <script
-        src = "http://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js">
-</script>
-  <canvas id = "can1" class = "can"> </canvas>
-  <canvas id = "can2" class = "can"> </canvas>
-  </br>
-  Filename:
-  <input type = "file" multiple = "false" accept = "image/*"
-         id = "finput" onchange = "upload()">
-</br>
-  <input type = "button" value = "Make Grayscale"
-         onclick = "makeGray(image)" >
-</div>
+<body>
+  <h1> Upload an Image and convert it in Grayscale!</h1>
+
+  <div class="div1">
+    <script src="http://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js">
+    </script>
+    <canvas id="can1" class="can"> </canvas>
+    <canvas id="can2" class="can"> </canvas>
+    </br>
+    Filename:
+    <input type="file" multiple="false" accept="image/*" id="finput" onchange="upload()">
+    </br>
+    <input type="button" value="Make Grayscale" onclick="makeGray(image)">
+  </div>
 
 </body>
 <!-- here the BODY ends -->
+
 </html>
